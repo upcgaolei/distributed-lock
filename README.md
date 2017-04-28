@@ -1,7 +1,7 @@
 # Distributed-Lock
 基于Redis和ZooKeeper实现的分布式锁
 
-##基于Redis实现的分布式锁(可重入)
+## 基于Redis实现的分布式锁(可重入)
 ~~~ java
 @Test
     public void testRedisReentrantLock() {
