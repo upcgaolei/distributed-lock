@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dance</groupId>
-    <artifactId>Distributed-Kit</artifactId>
+    <artifactId>Distributed-Lock</artifactId>
     <version>0.0.1</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,8 +53,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -67,15 +67,4 @@
       		</plugin>
         </plugins>
     </build>
-    <developers>
-        <developer>
-            <name>Sun yujia</name>
-            <id>yujiasun</id>
-            <email>yujiasun@aliyun.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
 </project>

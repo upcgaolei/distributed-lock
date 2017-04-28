@@ -1,0 +1,6 @@
+# Created by gaoleizhou@gmail.com
+.idea
+*.iml
+target/
+src/main/resources/
+src/test/

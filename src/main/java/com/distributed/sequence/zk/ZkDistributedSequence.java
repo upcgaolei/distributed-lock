@@ -1,6 +1,6 @@
 package com.distributed.sequence.zk;
 
-import com.distributed.lock.zk.ZkReentrantLockCleanerTask;
+import com.distributed.zk.ZkReentrantLockCleanerTask;
 import com.distributed.sequence.DistributedSequence;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
@@ -9,7 +9,9 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by sunyujia@aliyun.com on 2016/2/25.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public class ZkDistributedSequence implements DistributedSequence {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(ZkReentrantLockCleanerTask.class);
@@ -52,7 +54,7 @@ public class ZkDistributedSequence implements DistributedSequence {
     public Long sequence(String sequenceName) {
         try {
             int value=client.setData().withVersion(-1).forPath("/"+sequenceName,"".getBytes()).getVersion();
-            return new Long(value);
+            return (long) value;
         } catch (Exception e) {
             e.printStackTrace();
         }

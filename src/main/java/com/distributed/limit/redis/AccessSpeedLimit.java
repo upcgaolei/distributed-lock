@@ -10,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 分布式速率限制 例如:限制n秒钟请求x次
- * Created by sunyujia@aliyun.com on 2015/9/30.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public class AccessSpeedLimit {
 

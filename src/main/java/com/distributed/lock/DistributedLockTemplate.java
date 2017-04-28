@@ -1,17 +1,18 @@
 package com.distributed.lock;
 
 /**
- * 分布式锁模板类
- * Created by sunyujia@aliyun.com on 2016/2/23.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
+ * Desc: 分布式锁模板类
  */
 public interface DistributedLockTemplate {
-
     /**
-     *
-     * @param lockId 锁id(对应业务唯一ID)
+     * 对接接口方法
+     * @param lockName 锁id(对应业务唯一ID)
      * @param timeout 单位毫秒
      * @param callback 回调函数
-     * @return
+     * @return 返回结果
      */
-    public Object execute(String lockId,int timeout,Callback callback);
+    Object execute(String lockName, int timeout, Callback callback);
 }

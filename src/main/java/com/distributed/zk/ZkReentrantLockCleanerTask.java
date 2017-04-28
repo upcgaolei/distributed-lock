@@ -1,4 +1,4 @@
-package com.distributed.lock.zk;
+package com.distributed.zk;
 
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
@@ -11,7 +11,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by sunyujia@aliyun.com on 2016/2/25.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public class ZkReentrantLockCleanerTask extends TimerTask {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(ZkReentrantLockCleanerTask.class);

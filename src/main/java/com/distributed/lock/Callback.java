@@ -1,11 +1,23 @@
 package com.distributed.lock;
 
 /**
- * Created by sunyujia@aliyun.com on 2016/2/23.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public interface Callback {
 
-    public Object onGetLock() throws InterruptedException;
+    /**
+     * 获得锁后要做的事情
+     * @return 处理结果
+     * @throws InterruptedException
+     */
+    Object onGetLock() throws InterruptedException;
 
-    public Object onTimeout() throws InterruptedException;
+    /**
+     * 超时后要做的事情
+     * @return 处理结果
+     * @throws InterruptedException
+     */
+    Object onTimeout() throws InterruptedException;
 }

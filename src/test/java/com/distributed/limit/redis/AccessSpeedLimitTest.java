@@ -1,15 +1,16 @@
 package com.distributed.limit.redis;
 
-import com.distributed.lock.redis.RedisDistributedLockTemplate;
+import com.distributed.redis.RedisDistributedLockTemplate;
 import org.junit.Test;
 import redis.clients.jedis.JedisPool;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 /**
- * Created by sunyujia@aliyun.com on 2016/2/27.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public class AccessSpeedLimitTest {
     @Test

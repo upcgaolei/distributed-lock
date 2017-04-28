@@ -1,4 +1,4 @@
-package com.distributed.lock.zk;
+package com.distributed.zk;
 
 import com.distributed.lock.Callback;
 import com.distributed.lock.DistributedLockTemplate;
@@ -8,7 +8,9 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by sunyujia@aliyun.com on 2016/2/26.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public class ZkDistributedLockTemplate implements DistributedLockTemplate {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(ZkDistributedLockTemplate.class);
@@ -22,15 +24,15 @@ public class ZkDistributedLockTemplate implements DistributedLockTemplate {
 
 
 
-    private boolean tryLock(ZkReentrantLock distributedReentrantLock,Long timeout) throws Exception {
+    private boolean tryLock(ZkReentrantLock distributedReentrantLock, Long timeout) throws Exception {
         return distributedReentrantLock.tryLock(timeout, TimeUnit.MILLISECONDS);
     }
 
-    public Object execute(String lockId, int timeout, Callback callback) {
+    public Object execute(String lockName, int timeout, Callback callback) {
         ZkReentrantLock distributedReentrantLock = null;
         boolean getLock=false;
         try {
-            distributedReentrantLock = new ZkReentrantLock(client,lockId);
+            distributedReentrantLock = new ZkReentrantLock(client, lockName);
             if(tryLock(distributedReentrantLock,new Long(timeout))){
                 getLock=true;
                 return callback.onGetLock();

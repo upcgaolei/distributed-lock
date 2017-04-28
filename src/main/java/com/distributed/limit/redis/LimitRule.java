@@ -1,10 +1,9 @@
 package com.distributed.limit.redis;
 
-import java.util.concurrent.TimeUnit;
-
 /**
- * 限制规则
- * Created by sunyujia@aliyun.com on 2015/9/30.
+ * Created by zgl
+ * Date: 2017/4/23.
+ * Email: gaoleizhou@gmail.com
  */
 public class LimitRule {
 
@@ -56,6 +55,6 @@ public class LimitRule {
     }
 
     public boolean enableLimitLock(){
-        return getLockTime()>0&&getLockCount()>0;
+        return getLockTime() > 0 && getLockCount() > 0;
     }
 }
