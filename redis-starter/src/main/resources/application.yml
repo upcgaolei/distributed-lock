@@ -1,0 +1,9 @@
+redis:
+  host: 127.0.0.1
+  port: 6379
+  maxTotal: 100
+  maxIdle: 10
+  maxWaitMillis: 100000
+
+server:
+  port: 8082

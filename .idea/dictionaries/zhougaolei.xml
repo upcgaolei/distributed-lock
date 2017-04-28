@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="zhougaolei">
     <words>
+      <w>jedis</w>
       <w>pexpire</w>
       <w>setnx</w>
       <w>tonumber</w>

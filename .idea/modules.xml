@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Distributed-Lock.iml" filepath="$PROJECT_DIR$/Distributed-Lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lock/lock.iml" filepath="$PROJECT_DIR$/lock/lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-starter.iml" filepath="$PROJECT_DIR$/redis-starter.iml" />
     </modules>
   </component>
 </project>
